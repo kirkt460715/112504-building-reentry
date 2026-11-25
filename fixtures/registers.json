@@ -1,0 +1,104 @@
+{
+  "building": "house-8",
+  "units": [
+    "u-11",
+    "u-12",
+    "u-21"
+  ],
+  "access": {
+    "u-11": [
+      "front",
+      "stairs-a"
+    ],
+    "u-12": [
+      "front",
+      "stairs-a"
+    ],
+    "u-21": [
+      "rear",
+      "stairs-b"
+    ]
+  },
+  "facilities": [
+    {
+      "id": "pump-2",
+      "serves": [
+        "u-11",
+        "u-12"
+      ],
+      "status": "inspection_only"
+    },
+    {
+      "id": "panel-3",
+      "serves": [
+        "u-12",
+        "u-21"
+      ],
+      "status": "isolated"
+    }
+  ],
+  "conditions": {
+    "u-11": [
+      "pump-2"
+    ],
+    "u-12": [
+      "pump-2",
+      "panel-3"
+    ],
+    "u-21": [
+      "panel-3"
+    ]
+  },
+  "entry_fact": {
+    "unit": "u-11",
+    "permit": "permit-6",
+    "at": "2028-07-03T15:10:00+08:00"
+  },
+  "updated_scope": {
+    "facility": "pump-2",
+    "fault": [
+      "u-11"
+    ],
+    "reported_at": "2028-07-03T16:00:00+08:00"
+  },
+  "permitted_access": [
+    {
+      "unit": "u-11",
+      "permit": "permit-6",
+      "kind": "residential",
+      "issued_at": "2028-07-03T14:00:00+08:00"
+    },
+    {
+      "unit": "u-21",
+      "permit": "permit-8",
+      "kind": "retrieve_items",
+      "issued_at": "2028-07-03T14:15:00+08:00"
+    }
+  ],
+  "route_observations": {
+    "front": "usable",
+    "stairs-a": "usable",
+    "rear": "usable",
+    "stairs-b": "supervised_only"
+  },
+  "safety_checks": [
+    {
+      "id": "check-9",
+      "facility": "pump-2",
+      "use": "inspection_only",
+      "cleared_units": [
+        "u-11",
+        "u-12"
+      ]
+    },
+    {
+      "id": "check-10",
+      "facility": "pump-2",
+      "use": "residential",
+      "cleared_units": [
+        "u-11",
+        "u-12"
+      ]
+    }
+  ]
+}

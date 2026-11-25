@@ -1,0 +1,31 @@
+[
+  {
+    "operation": "handover",
+    "request": {
+      "facility": "pump-2",
+      "mode": "residential",
+      "scope": [
+        "u-11",
+        "u-12"
+      ]
+    },
+    "reply": {
+      "remote_receipt": "util-31",
+      "mode": "residential",
+      "accepted": true
+    },
+    "outcome": "commit_disconnect"
+  },
+  {
+    "operation": "entry",
+    "request": {
+      "unit": "u-11",
+      "permit": "permit-6"
+    },
+    "reply": {
+      "remote_receipt": "entry-2",
+      "observed_at": "2028-07-03T15:10:00+08:00"
+    },
+    "outcome": "success"
+  }
+]
