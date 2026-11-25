@@ -27,5 +27,21 @@
       "observed_at": "2028-07-03T15:10:00+08:00"
     },
     "outcome": "success"
+  },
+  {
+    "operation": "handover",
+    "request": {
+      "facility": "pump-2",
+      "mode": "isolated",
+      "scope": [
+        "u-11"
+      ]
+    },
+    "reply": {
+      "remote_receipt": "util-32",
+      "mode": "isolated",
+      "accepted": true
+    },
+    "outcome": "success"
   }
 ]
